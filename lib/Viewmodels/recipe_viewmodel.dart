@@ -1,7 +1,6 @@
-
-  import 'package:flutter/foundation.dart';
- import 'package:awurarecipe/models/recipe_model.dart';
-  import 'package:awurarecipe/services/recipe_services.dart';
+import 'package:flutter/foundation.dart';
+import 'package:awurarecipe/models/recipe_model.dart';
+import 'package:awurarecipe/services/recipe_services.dart';
 
 class RecipeViewModel extends ChangeNotifier{
   final RecipeService _recipeService = RecipeService();

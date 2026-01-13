@@ -45,11 +45,12 @@ class RecipeDetailView extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const Icon(
-                        Icons.favorite_border,
-                        size: 28,
-                        color: Colors.red,
-                      ),
+                      // const Icon(
+                      //   Icons.favorite_border,
+                      //   size: 28,
+                      //   color: Colors.red,
+                        
+                      // ),
                     ],
                   ),
                   const SizedBox(height: 10),

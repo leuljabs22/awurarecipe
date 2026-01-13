@@ -11,7 +11,8 @@ class RecipeView extends StatelessWidget {
     final recipeViewModel = Provider.of<RecipeViewModel>(context);
 
     return Scaffold(
-      backgroundColor: Colors.grey[50], 
+      backgroundColor: Colors.brown,
+      
       body: SafeArea(
         child: Column(
           children: [
@@ -21,20 +22,22 @@ class RecipeView extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  
                   Text(
                     "Homemade Breakfast",
                     style: TextStyle(fontSize: 20, color: Colors.indigo, fontWeight: FontWeight.bold, letterSpacing: 1.2),
+                  
                   ),
                   SizedBox(height: 4),
                   Text(
-                    "What are we cooking?",
+                    "What are we cooking Today?",
                     style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
             ),
 
-            // 2. The Main Feed
+           
             Expanded(
               child: recipeViewModel.loading
                   ? Center(child: CircularProgressIndicator(color: Colors.indigo))
@@ -42,7 +45,7 @@ class RecipeView extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       itemCount: recipeViewModel.recipe.length,
                       itemBuilder: (context, index) {
-  final recipe = recipeViewModel.recipe[index];
+            final recipe = recipeViewModel.recipe[index];
   
   return GestureDetector(
     onTap: () => Navigator.push(
@@ -66,20 +69,19 @@ class RecipeView extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          // 1. THE IMAGE (Fixed logic)
+     
           Positioned.fill(
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Hero(
-                tag: recipe.id, // Enables the smooth transition
+                tag: recipe.id, 
                 child: Image.network(
-                  recipe.imageUrl, // Use the real URL from your model
-                  fit: BoxFit.cover, // This makes the image fill the container
+                  recipe.imageUrl, 
+                  fit: BoxFit.cover, 
                   errorBuilder: (context, error, stackTrace) {
-                    // Fallback if the URL is broken
                     return Container(
                       color: Colors.grey[200],
-                      child: Icon(Icons.fastfood, color: Colors.grey, size: 50),
+                      child: Icon(Icons.fastfood_rounded, color: Colors.grey, size: 50),
                     );
                   },
                 ),
@@ -87,7 +89,6 @@ class RecipeView extends StatelessWidget {
             ),
           ),
           
-          // 2. GRADIENT OVERLAY
           Positioned.fill(
             child: Container(
               decoration: BoxDecoration(
@@ -104,7 +105,7 @@ class RecipeView extends StatelessWidget {
             ),
           ),
           
-          // 3. TEXT CONTENT
+         
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
@@ -125,7 +126,7 @@ class RecipeView extends StatelessWidget {
                   children: [
                     Icon(Icons.timer_outlined, color: Colors.white70, size: 16),
                     SizedBox(width: 4),
-                    Text("Max: 20 mins", style: TextStyle(color: Colors.white70, fontSize: 12)),
+                    Text("Max: 15 mins To prepare", style: TextStyle(color: Colors.white70, fontSize: 12)),
                     Spacer(),
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
@@ -153,11 +154,16 @@ class RecipeView extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.indigo,
-        onPressed: () => recipeViewModel.fetchRecipe(),
-        child: Icon(Icons.refresh, color: Colors.white),
-      ),
+      floatingActionButton:FloatingActionButton(
+        backgroundColor:Colors.black,
+        onPressed:() => recipeViewModel.fetchRecipe(), 
+        child:Icon(Icons.search, color: Colors.white70,),
+    ),
+      // floatingActionButton: FloatingActionButton(
+      //   backgroundColor: Colors.white24,
+      //   onPressed: () => recipeViewModel.fetchRecipe(),
+      //   child: Icon(Icons.refresh, color: Colors.indigo),
+      // ),//refresh button to see the breakfasts available
     );
   }
 }
