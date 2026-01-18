@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "name": "Classic Ethiopian Firfir",
+    "imageUrl": "https://4.bp.blogspot.com/_TgpeKhnKoXU/SYIoNA5LN6I/AAAAAAAAAXs/qSCo4EvnhaU/s400/firfir.JPG",
+    "ingredients": [
+      { "name": "Onions", "quantity": "1 cup finely chopped" },
+      { "name": "Tomatoes", "quantity": "4 Pieces" },
+      { "name": "Berbere spice", "quantity": "2 Tablespoon" },
+      { "name": "Garlic", "quantity": "4 Pieces" },
+      { "name": "Olive Oil", "quantity": "2 tablespoons" },
+      { "name": "Injera", "quantity": "4 cups torn" },
+      { "name": "Water", "quantity": "1/4 Litres" },
+      { "name": "Salt to taste", "quantity": "As desired" }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Enkulal firfir",
+    "imageUrl": "https://i.ytimg.com/vi/y560KnFBhnk/hq720.jpg",
+    "ingredients": [
+      { "name": "Eggs", "quantity": "4 Large" },
+      { "name": "Olive Oil", "quantity": "2 tablespoons" },
+      { "name": "Onions", "quantity": "1 cup finely chopped" },
+      { "name": "Garlic", "quantity": "4 cloves minced" },
+      { "name": "Tomato", "quantity": "1-2 chopped" },
+      { "name": "Green chili", "quantity": "1 piece finely chopped" },
+      { "name": "Salt and black pepper", "quantity": "As desired" }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Chechebsa",
+    "imageUrl": "https://media.licdn.com/dms/image/v2/C4D22AQGxjqM3O-bv3A/feedshare-shrink_800/0/1667378625191",
+    "ingredients": [
+      { "name": "Oil", "quantity": "for greasing the pan" },
+      { "name": "Almond Flour", "quantity": "1 cup" },
+      { "name": "Water", "quantity": "2 cups" },
+      { "name": "Berbere spice", "quantity": "1 Tablespoon" },
+      { "name": "Garlic", "quantity": "4 Pieces" },
+      { "name": "Vegetable Oil", "quantity": "2 tablespoons" },
+      { "name": "Salt to taste", "quantity": "As desired" }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Kinche",
+    "imageUrl": "https://z-p3-scontent.fadd2-1.fna.fbcdn.net/v/t1.6435-9/186371007_2800638093599881_4282995417824773220_n.jpg",
+    "ingredients": [
+      { "name": "Wheat", "quantity": "1 cup cracked" },
+      { "name": "Water", "quantity": "2-3 cups" },
+      { "name": "Ethiopian butter", "quantity": "2 tablespoons (Not for fasting days)" },
+      { "name": "Olive Oil", "quantity": "2 tablespoons (For fasting days)" },
+      { "name": "Salt to taste", "quantity": "As desired" }
+    ]
+  }
+]
