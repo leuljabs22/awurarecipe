@@ -12,18 +12,16 @@
       { "name": "Injera", "quantity": "4 cups torn" },
       { "name": "Water", "quantity": "1/4 Litres" },
       { "name": "Salt to taste", "quantity": "As desired" }
+    ],
+    "instructions": [
+      "1. Heat a medium sized saucepan over medium heat.",
+      "2. Add the onions and salt to sweat for about five minutes, until they become translucent.",
+      "3. Add the oil and garlic, cooking for another 2-3 minutes.",
+      "4. In a small bowl whisk together the water, wine, berbere, tomato paste, and lemon juice.",
+      "5. Tip the liquid into the pan and stir to combine with the onions and garlic. Add the dates and cook for another minute.",
+      "6. Carefully stir the injera pieces through the sauce, trying not to break them up as you stir.",
+      "7. Tip onto a plate and top with the jalapeño slivers."
     ]
-    
-    "instructions":[
-1.Heat a medium sized saucepan over medium heat. 
-2.Add the onions and salt to sweat for about five minutes, until they become translucent. 
-3.Add the oil and garlic, cooking for another 2-3 minutes.
-4.In a small bowl whisk together the water, wine, berbere, tomato paste, and lemon juice. 
-5.Tip the liquid into the pan and stir to combine with the onions and garlic. Add the dates and cook for another minute.
-6.Carefully stir the injera pieces through the sauce, trying not to break them up as you stir.
-7.Tip onto a plate and top with the jalapeño slivers.
- ]
- 
   },
   {
     "id": "2",
@@ -37,14 +35,14 @@
       { "name": "Tomato", "quantity": "1-2 chopped" },
       { "name": "Green chili", "quantity": "1 piece finely chopped" },
       { "name": "Salt and black pepper", "quantity": "As desired" }
-    ]
-    "instruction":[
-1.Sauté Aromatics: Heat oil or niter kibbeh in a skillet. 
-2.Add onions and cook until softened (about 3-5 mins).
-3.Add Vegetables & Spices: Stir in garlic, tomatoes, and green chili, cooking until soft (another 3 mins). Add berbere (if using) and sauté for another minute.
-4.Scramble Eggs: Pour in the beaten eggs and stir continuously, gently pulling from the sides as they cook to create small, moist curds, cooking until just set.
-5.Finish & Serve: Remove from heat, stir in salt and pepper. 
-6.Garnish with fresh cilantro and serve immediately with torn injera or bread on the side
+    ],
+    "instructions": [
+      "1. Sauté Aromatics: Heat oil or niter kibbeh in a skillet.",
+      "2. Add onions and cook until softened (about 3-5 mins).",
+      "3. Add Vegetables & Spices: Stir in garlic, tomatoes, and green chili, cooking until soft (another 3 mins). Add berbere (if using) and sauté for another minute.",
+      "4. Scramble Eggs: Pour in the beaten eggs and stir continuously, gently pulling from the sides as they cook to create small, moist curds, cooking until just set.",
+      "5. Finish & Serve: Remove from heat, stir in salt and pepper.",
+      "6. Garnish with fresh cilantro and serve immediately with torn injera or bread on the side"
     ]
   },
   {
@@ -59,15 +57,16 @@
       { "name": "Garlic", "quantity": "4 Pieces" },
       { "name": "Vegetable Oil", "quantity": "2 tablespoons" },
       { "name": "Salt to taste", "quantity": "As desired" }
+    ],
+    "instructions": [
+      "1. Prepare the Batter: In a mixing bowl, combine the teff flour and almond flour. Gradually add water until you achieve a pancake batter-like consistency.",
+      "2. Make the Kita (Flatbread): Heat a flat iron pan (mitad) over medium heat. Pour the batter onto the pan, forming a flatbread. Cook until golden brown on both sides, then remove from the heat.",
+      "3. Tear the Kita: Tear the baked Kita into small pieces and set aside.",
+      "4. Flavor the Mixture: In a separate pan, melt 1 tablespoon of kibe over low heat. Add 1 teaspoon of Berbere powder and 1 teaspoon of cardamom, stirring gently to combine.",
+      "5. Combine and Cook: Add the torn pieces of Kita into the pan and mix well, ensuring each piece is coated with the buttery, spiced mixture. Cook for a few minutes until heated through.",
+      "6. Optional Sweet Touch: Drizzle with honey for a touch of sweetness, balancing the spicy flavors.",
+      "7. Serve and Enjoy: Serve your Teff and Almond Chechebsa warm, paired with a cup of tea or coffee for a satisfying treat!"
     ]
-    "instructions":[
-1.Prepare the Batter: In a mixing bowl, combine the teff flour and almond flour. Gradually add water until you achieve a pancake batter-like consistency.
-2.Make the Kita (Flatbread): Heat a flat iron pan (mitad) over medium heat. Pour the batter onto the pan, forming a flatbread. Cook until golden brown on both sides, then remove from the heat.
-3.Tear the Kita: Tear the baked Kita into small pieces and set aside.
-4.Flavor the Mixture: In a separate pan, melt 1 tablespoon of kibe over low heat. Add 1 teaspoon of Berbere powder and 1 teaspoon of cardamom, stirring gently to combine.
-5.Combine and Cook: Add the torn pieces of Kita into the pan and mix well, ensuring each piece is coated with the buttery, spiced mixture. Cook for a few minutes until heated through.
-6.Optional Sweet Touch: Drizzle with honey for a touch of sweetness, balancing the spicy flavors.
-7.Serve and Enjoy: Serve your Teff and Almond Chechebsa warm, paired with a cup of tea or coffee for a satisfying treat!]
   },
   {
     "id": "4",
@@ -79,13 +78,13 @@
       { "name": "Ethiopian butter", "quantity": "2 tablespoons (Not for fasting days)" },
       { "name": "Olive Oil", "quantity": "2 tablespoons (For fasting days)" },
       { "name": "Salt to taste", "quantity": "As desired" }
-    ]
-    "instructions":[
-1.Combine & Boil: Add cracked wheat and water (or liquid) to a pot, then bring to a boil.
-2.Simmer: Reduce heat, cover, and cook gently for about 10-20 minutes, or until the liquid is absorbed and grains are tender and fluffy.
-3.Rest: Remove from heat and let stand, covered, for about 5 minutes.
-4.Finish: Stir in the Niter Kibbeh (or butter/oil) and salt to your liking.
-5.Serve: Enjoy warm, optionally with a sprinkle of Mitmita for heat. 
+    ],
+    "instructions": [
+      "1. Combine & Boil: Add cracked wheat and water (or liquid) to a pot, then bring to a boil.",
+      "2. Simmer: Reduce heat, cover, and cook gently for about 10-20 minutes, or until the liquid is absorbed and grains are tender and fluffy.",
+      "3. Rest: Remove from heat and let stand, covered, for about 5 minutes.",
+      "4. Finish: Stir in the Niter Kibbeh (or butter/oil) and salt to your liking.",
+      "5. Serve: Enjoy warm, optionally with a sprinkle of Mitmita for heat."
     ]
   }
 ]
