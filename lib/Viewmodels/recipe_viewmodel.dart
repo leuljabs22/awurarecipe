@@ -1,25 +1,36 @@
-import 'package:flutter/foundation.dart';
-import 'package:awurarecipe/models/recipe_model.dart';
-import 'package:awurarecipe/services/recipe_services.dart';
+import 'package:flutter/material.dart';
+import '../models/recipe_model.dart';
+import '../services/recipe_services.dart';
 
-class RecipeViewModel extends ChangeNotifier{
-  final RecipeService _recipeService = RecipeService();
-  List <Breakfast> _recipe = [];
-  bool _loading = false;
+class RecipeViewModel extends ChangeNotifier {
+  final RecipeService _service = RecipeService();
+  
+  List<Breakfast> _breakfasts = [];
+  bool _isLoading = false;
+  String? _errorMessage;
 
-List <Breakfast> get recipe => _recipe;
-bool get loading => _loading;
+  
+  List<Breakfast> get recipes => _breakfasts;
+  bool get isLoading => _isLoading;
+  String? get errorMessage => _errorMessage;
 
-Future<void> fetchRecipe() async {
-  _loading = true;
-  notifyListeners();
+  Future<void> loadRecipes() async {
+    _isLoading = true;
+    _errorMessage = null;
+    notifyListeners(); 
 
-  _recipe = await _recipeService.fetchRecipe();
-
-_loading =false;
-notifyListeners();
-
+    try {
+      _breakfasts = await _service.fetchRecipes();
+    } catch (e) {
+      _errorMessage = e.toString();
+    } finally {
+      _isLoading = false;
+      notifyListeners(); 
+    }
+  }
 }
-}
+
+
+
 
 

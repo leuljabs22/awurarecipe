@@ -2,121 +2,84 @@ import 'package:flutter/material.dart';
 import '../models/recipe_model.dart';
 
 class RecipeDetailView extends StatelessWidget {
-  final Breakfast recipe;
-
-  const RecipeDetailView({Key? key, required this.recipe}) : super(key: key);
+  final Breakfast breakf;
+  const RecipeDetailView({super.key, required this.breakf});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: CustomScrollView(
-        slivers: [
-          SliverAppBar(
-            expandedHeight: 400,
-            pinned: true,
-            flexibleSpace: FlexibleSpaceBar(
-              background: Hero(
-                tag: recipe.id,
-                child: Image.network(
-                  recipe.imageUrl, 
-                  fit: BoxFit.cover,
-                ),
-              ),
+      appBar: AppBar(title: Text(breakf.name)),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.network(
+              breakf.image,
+              width: double.infinity,
+              height: 250,
+              fit: BoxFit.cover,
             ),
-          ),
-
-      
-          SliverToBoxAdapter(
-            child: Container(
-              padding: const EdgeInsets.all(25),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        child: Text(
-                          recipe.name,
-                          style: const TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      // const Icon(
-                      //   Icons.favorite_border,
-                      //   size: 28,
-                      //   color: Colors.red,
-                        
-                      // ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                  const Text(
-                    "Homemade Special",
-                    style: TextStyle(
-                      color: Colors.indigo,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  const Divider(height: 40, thickness: 1),
-
-                  const Text(
-                    "Description",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(height: 10),
-                  Text(
-                    "Enjoy this delicious ${recipe.name}. Perfectly prepared with fresh ingredients to give you an authentic homemade taste.",
-                    style: const TextStyle(
-                      fontSize: 16,
-                      color: Colors.black54,
-                      height: 1.6,
-                    ),
-                  ),
-
-                  const SizedBox(height: 30),
-
-           
                   const Text(
                     "Ingredients",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(height: 10),
+                  const Divider(),
+                  ...breakf.ingredients.map(
+                    (ing) => ListTile(
+                      title: Text(ing.name),
+                      trailing: Text(
+                        ing.quantity,
+                        style: const TextStyle(color: Colors.grey),
+                      ),
+                    ),
+                  ),
 
-                  ...recipe.ingredient.map((ingredient) {
-                    return _buildIngredientItem(
-                      "${ingredient.name} (${ingredient.quantity})",
+                  const Text(
+                    "Preparation Steps",
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  ),
+                  const Divider(),
+
+                  ...breakf.instructions.asMap().entries.map((entry) {
+                    int index = entry.key;
+                    String stepText = entry.value;
+
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          CircleAvatar(
+                            radius: 12,
+                            backgroundColor: Colors.brown,
+                            child: Text(
+                              "${index + 1}",
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Text(
+                              stepText,
+                              style: const TextStyle(fontSize: 16, height: 1.5),
+                            ),
+                          ),
+                        ],
+                      ),
                     );
-                  }).toList(),
-
-                  const SizedBox(height: 50), 
+                  }), //.toList(),
                 ],
               ),
             ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildIngredientItem(String text) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5),
-      child: Row(
-        crossAxisAlignment:
-            CrossAxisAlignment.start, 
-        children: [
-          const Icon(
-            Icons.check_circle_outline,
-            color: Colors.indigo,
-            size: 20,
-          ),
-          const SizedBox(width: 10),
-          Expanded(child: Text(text, style: const TextStyle(fontSize: 16))),
-        ],
+          ],
+        ),
       ),
     );
   }
